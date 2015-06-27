@@ -3,7 +3,7 @@ package chapter2;
 import java.util.Arrays;
 
 public class InsertSortA {
-	public static int[] insertsorta(int[] s){
+	public static void insertsorta(int[] s){
 		int temp = 0;
 		for(int j=1;j<s.length;j++){
 			temp = s[j];
@@ -14,10 +14,10 @@ public class InsertSortA {
 			}
 			s[i+1] = temp;
 		}
-		return s;
 	}
 	public static void main(String[] args){
 		int[] s = {2,5,9,3,2,4,1};
-		System.out.println(Arrays.toString(insertsorta(s)));
+		insertsorta(s);
+		System.out.println(Arrays.toString(s));
 	}
 }
