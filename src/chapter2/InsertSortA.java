@@ -8,7 +8,7 @@ public class InsertSortA {
 		for(int j=1;j<s.length;j++){
 			temp = s[j];
 			int i = j-1;
-			while( i>0 && s[i]>temp){
+			while( i>=0 && s[i]>temp){
 				s[i+1] = s[i];
 				i--;
 			}
@@ -17,7 +17,7 @@ public class InsertSortA {
 		return s;
 	}
 	public static void main(String[] args){
-		int[] s = {1,2,5,9,3,2,4};
+		int[] s = {2,5,9,3,2,4,1};
 		System.out.println(Arrays.toString(insertsorta(s)));
 	}
 }
