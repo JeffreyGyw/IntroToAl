@@ -11,8 +11,8 @@ public class Exe237 {
 		return false;
 	}
 	public static void main(String[] args) {
-		int[] a = {0,1};
-		System.out.println(solution(a, 1));
+		int[] a = {0,1,35,23,5,6,6,7,2};
+		System.out.println(solution(a, 9));
 		
 	}
 }
