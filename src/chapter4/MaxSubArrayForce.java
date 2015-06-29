@@ -1,6 +1,5 @@
 package chapter4;
 
-import java.util.Arrays;
 
 public class MaxSubArrayForce {
 	public static int maxsubarray(int[] a) {
