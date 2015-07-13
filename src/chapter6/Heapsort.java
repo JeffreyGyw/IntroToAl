@@ -37,9 +37,25 @@ public class Heapsort {
 			maxheapify(a, i);
 		}
 	}
+	public static void heapsort(int[] a) {
+		buildmaxheap(a);
+		int[] b = new int[a.length];
+		System.arraycopy(a, 0, b, 0, a.length);
+		int temp;
+		for(int i = a.length-1;i>=1;i--){
+			temp = b[i];
+			b[i] = b[0];
+			b[0] = temp;
+			a[i] = b[i];
+			a[0] = b[0];
+			b = new int[i];
+			System.arraycopy(a,0, b, 0, i);
+			maxheapify(b, 0);
+		}
+	}
 	public static void main(String[] args) {
 		int[] a = {4,1,3,2,16,9,10,14,8,7};
-		buildmaxheap(a);
+		heapsort(a);
 		System.out.println(Arrays.toString(a));
 	}
 }
